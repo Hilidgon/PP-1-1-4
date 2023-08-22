@@ -18,8 +18,6 @@ public class Main {
         userService.saveUser("Владимир", "Журавлев", (byte) 35);
         userService.saveUser("Арина", "Анисимова", (byte) 19);
 
-        userService.removeUserById(1);
-
         List<User> users = userService.getAllUsers();
         System.out.println(users);
 
@@ -27,6 +25,7 @@ public class Main {
 
         userService.dropUsersTable();
 
-        Util.closeConnection();
+        Util.closeFactory();
+//        Util.closeConnection();
     }
 }
